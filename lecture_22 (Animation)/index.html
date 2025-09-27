@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        *{
+            padding: 0%;
+            margin: 0%;
+        }
+        .container{
+            width: 350vh;
+            height: 350vh;
+            background-color: red;
+            border: 2px solid black;
+        }
+        #box1{
+            width: 350px;
+            height: 60px;
+            font-size: 50px;
+            background-color: aqua; 
+            border: 3px solid black;
+            border-radius: 10px;
+            position: relative;
+            animation-name: silde;
+            /* animation: 5s ease-in is infini; */
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-delay: 2s;
+            animation-timing-function: ease-in-out;
+            animation-direction: alternate;
+            animation-fill-mode: forwards;
+            animation-play-state: running;
+        }
+        @keyframes silde {
+            from{
+                top:0;
+                left: 0;;
+            }
+            to{
+                top: 0;
+                left: 1200px;
+            }
+        }
+        #circle{
+            width: 100px;
+            height: 100px;
+            /* font-size: 20px; */
+            background-color: aqua; 
+            border: 3px solid black;
+            border-radius: 50px;
+            position: relative;
+            animation-name: circlemotion;
+            animation-duration: 5s;
+            animation-delay: 0s;
+            top: 30%;
+            left: 40%;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+            animation-direction: alternate-reverse;
+            animation-fill-mode: none;
+            animation-play-state: running;
+        }
+        @keyframes circlemotion {
+            0%   {
+                background-color: red;
+                top: 1%;
+                left: 5%;
+            }
+            30%  {
+                background-color: yellow;
+                top: 5%;
+                left: 90%;
+            }
+            60%  {
+                background-color: yellow;
+                top: 90%;
+                left: 10%;
+            }
+            100% {
+                background-color: green;
+                top: 90%;
+                left: 95%;
+            }
+        }
+
+        #box2{
+            width: 350px;
+            height: 60px;
+            font-size: 50px;
+            background-color: aqua; 
+            border: 3px solid black;
+            border-radius: 10px;
+            position: relative;
+            animation-name: sildebutton;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-delay: 2s;
+            animation-timing-function: linear;
+            animation-direction: alternate;
+            animation-fill-mode: forwards;
+            animation-play-state: running;
+        }
+        @keyframes sildebutton {
+            from{
+                top: 280px;;
+                left: 0;;
+            }
+            to{
+                top: 280px;
+                left: 1200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="box1">Snehal Majhi</div>
+        <div id="circle"></div>
+        <div id="box2">Snehal Majhi</div>
+    </div>
+</body>
+</html>
